@@ -40,7 +40,3 @@ Contributions are welcome! If you have suggestions for improvements or new featu
 ## 📄 License
 
 This project is licensed under the MIT License.
-
----
-
-Feel free to customize this template further to better fit your project's specifics. 
