@@ -1,7 +1,3 @@
-Certainly! Here's a draft for your `README.md` file that introduces your repository as a sprint "Planning Poker" game:
-
----
-
 # Planning Poker
 
 Welcome to the Planning Poker repository! This project offers a fun and interactive way for Agile teams to estimate user stories during sprint planning sessions.
