@@ -1,0 +1,251 @@
+body {
+    background-color: #065f46;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.table {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 20px;
+    background: radial-gradient(circle, #0a6847, #03402c);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.label {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 10px; /* Add space below the label */
+    order: -1; /* Moves it to the top in flexbox */
+}
+
+.reset {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 10px; /* Add space below the label */
+    order: 99; /* Moves it to the bottom in flexbox */
+}
+
+.selected-container {
+    display: flex;
+    order: 2;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.user-container {
+    display: flex;
+    order: 2;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.info-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: initial;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.right-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    width: 90px;
+    height: 135px;
+    background-color: white;
+    color: black;
+    font-size: 2vw;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Lift effect on hover */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Number/Rank of the card */
+.card .rank {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card .top-left {
+    top: 8px;
+    left: 8px;
+}
+
+.card .bottom-right {
+    bottom: 8px;
+    right: 8px;
+    transform: rotate(180deg); /* Flipped for symmetry */
+}
+
+/* player name on card */
+.card .player_name {
+    font-size: 1vw; /* Larger for better visibility */
+}
+
+/* Suit symbol */
+.card .suit {
+    font-size: 40px; /* Larger for better visibility */
+}
+
+/* Red suits styling */
+.card.heart .suit,
+.card.diamond .suit,
+.card.heart .rank,
+.card.diamond .rank {
+    color: red;
+}
+
+.scoreboard {
+    width:500px;
+    border-collapse: collapse;
+    background: black; /* Dark background for scoreboard look */
+    color: limegreen; /* Digital neon color */
+    font-family: 'Courier New', Courier, monospace; /* Digital font */
+    font-size: medium;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.8); /* Glowing outer border */
+    border: 3px solid limegreen; /* Solid outer border */
+    overflow: hidden;
+}
+
+.scoreboard a {
+    color: limegreen; /* Set link color to lime green */
+    text-decoration: none; /* Optional: Removes underline */
+}
+
+.scoreboard a:hover {
+    text-decoration: underline; /* Optional: Adds underline on hover */
+}
+
+.scoreboard th, .scoreboard td {
+    padding: 5px;
+    border: none; /* Remove inner borders */
+}
+
+.scoreboard th {
+    background: darkgreen;
+    color: white;
+    text-transform: uppercase;
+}
+
+.scoreboard tr:nth-child(even) {
+    background: rgba(0, 255, 0, 0.2);
+}
+
+/* Animate only the outer border */
+@keyframes outerGlow {
+    0% { box-shadow: 0 0 5px limegreen; }
+    50% { box-shadow: 0 0 15px limegreen; }
+    100% { box-shadow: 0 0 5px limegreen; }
+}
+
+.scoreboard {
+    animation: outerGlow 1.5s infinite alternate;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.card_image {
+    vertical-align: middle;
+}
+
+.userButton {
+    border-top: 1px solid #338535;
+    background: #0e6306;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0af712), to(#0e6306));
+    background: -webkit-linear-gradient(top, #0af712, #0e6306);
+    background: -moz-linear-gradient(top, #0af712, #0e6306);
+    background: -ms-linear-gradient(top, #0af712, #0e6306);
+    background: -o-linear-gradient(top, #0af712, #0e6306);
+    padding: 5px 10px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    font-size: 14px;
+    font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+.userButton:hover {
+    border-top-color: #15ff00;
+    background: #15ff00;
+    color: #ccc;
+}
+.userButton:active {
+    border-top-color: #ffffff;
+    background: #ffffff;
+}
+
+#screenFlash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 200, 50, 0.8); /* Yellowish explosion color */
+    opacity: 0;
+    z-index: 9999;
+    pointer-events: none; /* Prevent interaction */
+    transition: opacity 0.2s ease-out;
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+@keyframes shake {
+    0%, 100% { transform: translate(0px, 0px); }
+    25% { transform: translate(-5px, 2px); }
+    50% { transform: translate(5px, -2px); }
+    75% { transform: translate(-5px, 2px); }
+}
